@@ -17,6 +17,7 @@ const createDate = (tgl, i) => {
     tgl.forEach(el => {
       arrString.push(new Date(el).getTime() / 1000);
     });
+    arrString.sort();
     result = arrString.join('-');
   }
   return result.toString();
