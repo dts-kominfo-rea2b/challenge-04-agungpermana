@@ -8,7 +8,19 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (tgl, i) => {
+  let result = null;
+  if(i) {
+    result = new Date(tgl[i]).getTime() / 1000;
+  } else {
+    let arrString = [];
+    tgl.forEach(el => {
+      arrString.push(new Date(el).getTime() / 1000);
+    });
+    result = arrString.join('-');
+  }
+  return result.toString();
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
