@@ -10,7 +10,7 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (tgl, i) => {
   let result = null;
-  if(i) {
+  if(!isNaN(i)) {
     result = new Date(tgl[i]).getTime() / 1000;
   } else {
     let arrString = [];
